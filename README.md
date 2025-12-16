@@ -23,7 +23,11 @@ Save the backup file in a designated folder, appending a timestamp to the file n
 
  ```
 <appSettings>
-    <add key="ConnectionString" value="Server=YOUR_SERVER;Database=YOUR_DATABASE;Integrated Security=True;" />
+	
+	<connectionStrings>
+		<add name="DbConn"
+		connectionString="yourdatabaseconnectionaddress"/> //* for example :Server=localhost;Database=databasename;Integrated Security=True;TrustServerCertificate=True;
+	</connectionStrings>
     <add key="BackupFolder" value="C:\DatabaseBackups" />
     <add key="LogFolder" value="C:\DatabaseBackups\Logs" />
     <add key="BackupIntervalMinutes" value="60" />
